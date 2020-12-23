@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+    <title> Markteplaces </title>
+
+{% endblock %}
+
+{% block body %}
+
+    <h1> Markteplaces </h1>
+
+    {% for item in list %}
+        <ul>
+            <li> <a href='/{{ item.lower() }}'> {{ item }} </a> </li>
+        </ul>
+    {% endfor %}
+
+    {% block back %}{% endblock %}
+
+{% endblock %}

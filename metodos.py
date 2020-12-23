@@ -14,11 +14,11 @@ _ entregue ate 18:00 22/12/2020
 '''
 
 def marketplaces():
-    marketplace_list = ['Mercado Livre', 'B2W', 'Magalu']
+    marketplace_list = ['MeLi', 'B2W', 'Magalu']
     return marketplace_list
 
 def categories():
-    category_list = ['Móveis', 'Papelaria', 'Música']
+    category_list = ['Móveis', 'Papelaria', 'Música', sub_categories()]
     return category_list
 
 def sub_categories():

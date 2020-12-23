@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+    <title> Markteplaces </title>
+{% endblock %}
+
+{% block body %}
+
+{% for item in list %}
+  <p> {{ item }} </p>
+{% endfor %}
+
+{% endblock %}

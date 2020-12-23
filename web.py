@@ -1,10 +1,6 @@
 from flask import Flask, render_template
 
-from metodos import (
-    marketplaces,
-    categories,
-    sub_categories
-)
+from metodos import marketplaces, categories
 
 
 app = Flask(__name__)
@@ -12,22 +8,23 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
-
-@app.route('/marketplaces')
-def marketplace():
     mkt_list = marketplaces()
-    return render_template('lists.html', list = mkt_list)
+    return render_template('marketplaces.html', list = mkt_list)
 
-@app.route('/categories')
-def category():
+@app.route('/meli')
+def mkt_meli():
     cat_list = categories()
-    return render_template('lists.html', list = cat_list)
+    return render_template('categories.html', list = cat_list)
 
-@app.route('/subcategories')
-def sub_category():
-    sub_list = sub_categories()
-    return render_template('lists.html', list = sub_list)
+@app.route('/b2w')
+def mkt_b2w():
+    cat_list = categories()
+    return render_template('categories.html', list = cat_list)
+
+@app.route('/magalu')
+def mkt_magalu():
+    cat_list = categories()
+    return render_template('categories.html', list = cat_list)
 
 
 app.run(debug=True)
