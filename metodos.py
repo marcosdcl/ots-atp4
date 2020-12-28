@@ -1,7 +1,9 @@
+from log import log
 
 def marketplaces():
     title = 'marketplaces'
     marketplace_list = read_files(title)
+    log(title)
     return marketplace_list
 
 
@@ -9,12 +11,14 @@ def categories():
     title = 'categories'
     category_list = read_files(title)
     category_list.append(sub_categories())
+    log(title)
     return category_list
 
 
 def sub_categories():
     title = 'sub_categories'
     sub_category_list = read_files(title)
+    log(title)
     return sub_category_list
 
 
