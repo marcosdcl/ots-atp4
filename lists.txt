@@ -1,0 +1,3 @@
+marketplaces;MeLi;B2W;Magalu
+categories;Móveis;Papelaria;Música
+sub_categories;Cozinha;Escritório;Percursão
