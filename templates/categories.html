@@ -2,10 +2,13 @@
 
 {% block head %} 
 
-    <title> Markteplaces </title>
+    <title> Markteplace - {{ title }} </title>
+
 {% endblock %}
 
 {% block body %}
+
+  <h1>{{ title.upper() }}</h1>
 
 {% for item in list %}
   <p> {{ item }} </p>

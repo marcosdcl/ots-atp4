@@ -12,10 +12,21 @@
 
     {% for item in list %}
         <ul>
-            <li> <a href='/{{ item.lower() }}'> {{ item }} </a> </li>
+            <li> <a href='/categories/{{ item.lower() }}'> {{ item }} </a> </li>
         </ul>
     {% endfor %}
 
     {% block back %}{% endblock %}
+
+    <p>add a new marketplace:</p>
+
+    <form action="/add_mkt">
+        <input type="text" name="marketplace" placeholder="new marketplace" />
+        <input type="submit" value="ADD" />
+    </form>
+
+    {% if success %}
+        <p>New Markteplace, {{ mkt }} was successfully CREATED</p>
+    {% endif %}
 
 {% endblock %}
