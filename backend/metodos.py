@@ -1,4 +1,7 @@
-from log import log
+import sys
+sys.path.append('')
+
+from backend.log import log
 
 
 def marketplaces():
@@ -24,7 +27,7 @@ def sub_categories():
 
 
 def read_files(title):
-    file = open('lists.txt', 'r')
+    file = open('backend/lists.txt', 'r')
 
     for line in file:
         list_ = line.strip().split(';')
@@ -47,7 +50,7 @@ def read_files(title):
 
 def new_marketplaces(mkt:str) -> None:
 
-    file = open('lists.txt', 'r+')
+    file = open('backend/lists.txt', 'r+')
     temp_file = file.readlines()
     file.seek(0)
     for line in temp_file:

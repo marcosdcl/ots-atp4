@@ -1,4 +1,7 @@
-from metodos import (
+import sys
+sys.path.append('')
+
+from backend.metodos import (
     marketplaces,
     categories,
     sub_categories
